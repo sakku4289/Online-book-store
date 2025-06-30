@@ -1,0 +1,447 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Online Book Store
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-900">
+  <header class="bg-white shadow">
+   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <a class="text-2xl font-bold text-indigo-600 flex items-center" href="#">
+     <img alt="Logo of an open book with blue and white colors" class="mr-2" height="40" src="https://storage.googleapis.com/a1aa/image/6d29dc27-53d9-4262-e713-8c4133052caf.jpg" width="40"/>
+     Bookstore
+    </a>
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+     <a class="hover:text-indigo-600 transition" href="#">
+      Home
+     </a>
+     <a class="hover:text-indigo-600 transition" href="#">
+      Shop
+     </a>
+     <a class="hover:text-indigo-600 transition" href="#">
+      Categories
+     </a>
+     <a class="hover:text-indigo-600 transition" href="#">
+      About Us
+     </a>
+     <a class="hover:text-indigo-600 transition" href="#">
+      Contact
+     </a>
+    </nav>
+    <div class="flex items-center space-x-4">
+     <button aria-label="Search" class="text-gray-600 hover:text-indigo-600 transition hidden md:block">
+      <i class="fas fa-search fa-lg">
+      </i>
+     </button>
+     <button aria-label="User Account" class="text-gray-600 hover:text-indigo-600 transition hidden md:block">
+      <i class="fas fa-user fa-lg">
+      </i>
+     </button>
+     <button aria-label="Shopping Cart" class="relative text-gray-600 hover:text-indigo-600 transition">
+      <i class="fas fa-shopping-cart fa-lg">
+      </i>
+      <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1.5">
+       3
+      </span>
+     </button>
+     <button aria-label="Open Menu" class="md:hidden text-gray-600 hover:text-indigo-600 transition focus:outline-none" id="mobile-menu-button">
+      <i class="fas fa-bars fa-lg">
+      </i>
+     </button>
+    </div>
+   </div>
+   <nav class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#">
+     Home
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#">
+     Shop
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#">
+     Categories
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#">
+     About Us
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium" href="#">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <main class="container mx-auto px-4 py-8">
+   <section class="mb-12">
+    <div class="relative rounded-lg overflow-hidden shadow-lg">
+     <img alt="Banner showing a stack of colorful books with reading glasses on top, bright and inviting" class="w-full h-64 sm:h-80 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/929df96e-b75e-4f1e-680e-dfc76a34afcd.jpg" width="1200"/>
+     <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/70 to-indigo-600/50 flex flex-col justify-center px-6 sm:px-12">
+      <h1 class="text-white text-3xl sm:text-5xl font-extrabold max-w-xl">
+       Discover Your Next Favorite Book
+      </h1>
+      <p class="text-indigo-200 mt-4 max-w-md">
+       Explore thousands of titles across all genres. Free shipping on
+            orders over $50.
+      </p>
+      <a class="inline-block mt-6 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-6 rounded shadow" href="#shop">
+       Shop Now
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="mb-12" id="shop">
+    <h2 class="text-2xl font-bold mb-6 text-center text-indigo-700">
+     Featured Books
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+     <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+      <img alt="Book cover of a fantasy novel featuring a dragon flying over a medieval castle at sunset" class="rounded-t-lg object-cover h-72 w-full" height="600" src="https://storage.googleapis.com/a1aa/image/c351bf85-33f1-456a-c457-b419a7b15e2d.jpg" width="400"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="font-semibold text-lg text-indigo-800 mb-1">
+        Dragon's Legacy
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        An epic fantasy adventure filled with magic, dragons, and
+              heroism.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <span class="text-indigo-600 font-bold text-xl">
+         $14.99
+        </span>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded flex items-center">
+         <i class="fas fa-cart-plus mr-2">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+      <img alt="Book cover of a romantic novel showing a couple holding hands on a beach at sunset with warm colors" class="rounded-t-lg object-cover h-72 w-full" height="600" src="https://storage.googleapis.com/a1aa/image/85d8bba0-554e-4d74-d0e9-45831ca2d7bf.jpg" width="400"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="font-semibold text-lg text-indigo-800 mb-1">
+        Sunset Promises
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        A heartfelt romance about love, loss, and second chances.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <span class="text-indigo-600 font-bold text-xl">
+         $12.49
+        </span>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded flex items-center">
+         <i class="fas fa-cart-plus mr-2">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+      <img alt="Book cover of a science fiction novel featuring a futuristic spaceship flying through a starry galaxy" class="rounded-t-lg object-cover h-72 w-full" height="600" src="https://storage.googleapis.com/a1aa/image/66020706-ba2a-42c5-c9e4-69abdc4c3261.jpg" width="400"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="font-semibold text-lg text-indigo-800 mb-1">
+        Starbound Odyssey
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        A thrilling journey through space and time to save humanity.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <span class="text-indigo-600 font-bold text-xl">
+         $16.75
+        </span>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded flex items-center">
+         <i class="fas fa-cart-plus mr-2">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+      <img alt="Book cover of a mystery novel showing a dark alley with a silhouette of a detective holding a magnifying glass" class="rounded-t-lg object-cover h-72 w-full" height="600" src="https://storage.googleapis.com/a1aa/image/bfdf202a-1239-491f-9d3c-6374da3d757e.jpg" width="400"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="font-semibold text-lg text-indigo-800 mb-1">
+        Shadows of the Past
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        A gripping mystery unraveling secrets buried deep in the city.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <span class="text-indigo-600 font-bold text-xl">
+         $13.20
+        </span>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded flex items-center">
+         <i class="fas fa-cart-plus mr-2">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+      <img alt="Book cover of a historical fiction novel featuring an old map and a quill pen on a wooden desk" class="rounded-t-lg object-cover h-72 w-full" height="600" src="https://storage.googleapis.com/a1aa/image/09e9bfcc-9722-40d6-a243-8932529c6cd9.jpg" width="400"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="font-semibold text-lg text-indigo-800 mb-1">
+        The Forgotten Kingdom
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        A tale of love and war set in a lost kingdom of the past.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <span class="text-indigo-600 font-bold text-xl">
+         $15.00
+        </span>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded flex items-center">
+         <i class="fas fa-cart-plus mr-2">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+      <img alt="Book cover of a self-help book showing a sunrise behind mountain silhouettes with warm uplifting colors" class="rounded-t-lg object-cover h-72 w-full" height="600" src="https://storage.googleapis.com/a1aa/image/a50caadc-a8ba-4f24-1f32-0952c9c8c234.jpg" width="400"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="font-semibold text-lg text-indigo-800 mb-1">
+        Rise &amp; Shine
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        Empower yourself with daily habits for success and happiness.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <span class="text-indigo-600 font-bold text-xl">
+         $11.99
+        </span>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded flex items-center">
+         <i class="fas fa-cart-plus mr-2">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+      <img alt="Book cover of a cookbook featuring fresh vegetables, herbs, and colorful dishes on a rustic wooden table" class="rounded-t-lg object-cover h-72 w-full" height="600" src="https://storage.googleapis.com/a1aa/image/3dd52e9c-923c-4be2-57bd-4c6462c19d60.jpg" width="400"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="font-semibold text-lg text-indigo-800 mb-1">
+        Flavorful Feasts
+       </h3>
+       <p class="text-gray-600 flex-grow">
+        Delicious recipes from around the world to spice up your meals.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <span class="text-indigo-600 font-bold text-xl">
+         $18.50
+        </span>
+        <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded flex items-center">
+         <i class="fas fa-cart-plus mr-2">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6 text-center text-indigo-700">
+     Book Categories
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
+     <a class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition flex flex-col items-center" href="#">
+      <img alt="Icon representing fantasy books with a magic wand and stars in purple and gold colors" class="mb-2 w-16 h-16 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/1cdfbf0b-409a-4430-4744-9f442c22d1aa.jpg" width="80"/>
+      <span class="text-indigo-700 font-semibold">
+       Fantasy
+      </span>
+     </a>
+     <a class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition flex flex-col items-center" href="#">
+      <img alt="Icon representing romance books with a red heart and a rose" class="mb-2 w-16 h-16 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/c1f559ac-0c26-4c66-44aa-725a63769219.jpg" width="80"/>
+      <span class="text-indigo-700 font-semibold">
+       Romance
+      </span>
+     </a>
+     <a class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition flex flex-col items-center" href="#">
+      <img alt="Icon representing science fiction books with a rocket and planet in blue and silver colors" class="mb-2 w-16 h-16 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/1f137611-5be9-419a-2bc8-6f11a4c0ecf0.jpg" width="80"/>
+      <span class="text-indigo-700 font-semibold">
+       Sci-Fi
+      </span>
+     </a>
+     <a class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition flex flex-col items-center" href="#">
+      <img alt="Icon representing mystery books with a magnifying glass and footprints in dark colors" class="mb-2 w-16 h-16 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/1f0ad01a-825a-4ba8-b05c-3f97bde9307a.jpg" width="80"/>
+      <span class="text-indigo-700 font-semibold">
+       Mystery
+      </span>
+     </a>
+     <a class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition flex flex-col items-center" href="#">
+      <img alt="Icon representing history books with an old scroll and quill pen" class="mb-2 w-16 h-16 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/037f06f4-0bf7-444d-f941-f5dd2d82b39d.jpg" width="80"/>
+      <span class="text-indigo-700 font-semibold">
+       History
+      </span>
+     </a>
+     <a class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition flex flex-col items-center" href="#">
+      <img alt="Icon representing self-help books with a sunrise behind a mountain silhouette" class="mb-2 w-16 h-16 object-contain" height="80" src="https://storage.googleapis.com/a1aa/image/c5c7e550-b1cb-4c6e-acef-4fd5f401f3bc.jpg" width="80"/>
+      <span class="text-indigo-700 font-semibold">
+       Self-Help
+      </span>
+     </a>
+    </div>
+   </section>
+   <section class="mb-12">
+    <h2 class="text-2xl font-bold mb-6 text-center text-indigo-700">
+     Customer Reviews
+    </h2>
+    <div class="space-y-8 max-w-4xl mx-auto">
+     <blockquote class="bg-white p-6 rounded-lg shadow">
+      <p class="text-gray-800 italic mb-4">
+       "BookNest has an amazing selection of books and the shipping was
+            super fast. I found exactly what I was looking for!"
+      </p>
+      <footer class="text-indigo-600 font-semibold">
+       - Sarah M.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white p-6 rounded-lg shadow">
+      <p class="text-gray-800 italic mb-4">
+       "The website is easy to navigate and the prices are very
+            reasonable. Highly recommend for all book lovers."
+      </p>
+      <footer class="text-indigo-600 font-semibold">
+       - James T.
+      </footer>
+     </blockquote>
+     <blockquote class="bg-white p-6 rounded-lg shadow">
+      <p class="text-gray-800 italic mb-4">
+       "I love the variety of genres available. The customer service was
+            also very helpful when I had questions."
+      </p>
+      <footer class="text-indigo-600 font-semibold">
+       - Emily R.
+      </footer>
+     </blockquote>
+    </div>
+   </section>
+   <section class="mb-12 max-w-2xl mx-auto" id="contact-form">
+  <h2 class="text-2xl font-bold mb-6 text-center text-indigo-700">
+    Contact Us
+  </h2>
+  <form class="bg-white p-6 rounded-lg shadow space-y-4" action="#" method="POST">
+    <div>
+      <label for="name" class="block font-medium text-gray-700 mb-1">Full Name</label>
+      <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <div>
+      <label for="email" class="block font-medium text-gray-700 mb-1">Email Address</label>
+      <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <div>
+      <label for="subject" class="block font-medium text-gray-700 mb-1">Subject</label>
+      <input type="text" id="subject" name="subject" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <div>
+      <label for="message" class="block font-medium text-gray-700 mb-1">Your Message</label>
+      <textarea id="message" name="message" rows="4" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+    </div>
+    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded shadow">
+      Send Message
+    </button>
+  </form>
+</section>
+
+  </main>
+  <footer class="bg-indigo-900 text-indigo-200 py-8">
+   <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div>
+     <h3 class="font-bold text-lg mb-4">
+      BookNest
+     </h3>
+     <p class="text-sm">
+      Your one-stop online bookstore for all genres and interests. Bringing
+          stories to life since 2024.
+     </p>
+    </div>
+    <div>
+     <h3 class="font-bold text-lg mb-4">
+      Quick Links
+     </h3>
+     <ul class="space-y-2 text-sm">
+      <li>
+       <a class="hover:text-white transition" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white transition" href="#">
+        Shop
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white transition" href="#">
+        Categories
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white transition" href="#">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-white transition" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="font-bold text-lg mb-4">
+      Contact Us
+     </h3>
+     <address class="not-italic text-sm space-y-2">
+      <p>
+       123 book dbg 847133
+      </p>
+      <p>
+       Email: support@booknest.com
+      </p>
+      <p>
+       Phone: (123) 456-7890
+      </p>
+      <div class="flex space-x-4 mt-2">
+       <a aria-label="Facebook" class="hover:text-white transition" href="#">
+        <i class="fab fa-facebook fa-lg">
+        </i>
+       </a>
+       <a aria-label="Twitter" class="hover:text-white transition" href="#">
+        <i class="fab fa-twitter fa-lg">
+        </i>
+       </a>
+       <a aria-label="Instagram" class="hover:text-white transition" href="#">
+        <i class="fab fa-instagram fa-lg">
+        </i>
+       </a>
+      </div>
+     </address>
+    </div>
+   </div>
+   <div class="text-center text-xs mt-8 text-indigo-400">
+    © 2025 BookNest. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
